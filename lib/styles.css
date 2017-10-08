@@ -1,6 +1,21 @@
 body {
-	text-align: center;
+  text-align: center;
 }
+
 canvas {
   border: 1px solid black;
+  background:url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/N69pMl5/stars-rotating-north-pole-star-night-sky-polaris-time-lapse_hglvfkca_thumbnail-full01.png");
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  border: 10px solid black;
+  background:url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/N69pMl5/stars-rotating-north-pole-star-night-sky-polaris-time-lapse_hglvfkca_thumbnail-full01.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+article {
+  
 }
