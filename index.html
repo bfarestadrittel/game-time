@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,700" rel="stylesheet">
   <link rel="stylesheet" href="./lib/styles.css">
+  <link rel="icon" href="assets/favicon.ico">
   <meta charset="utf-8">
-  <title>Game Time</title>
+  <title>STAR BREAKER</title>
 </head>
 <body>
   <section>
+    <h1>STAR BREAKER</h1>
     <canvas
       id="game"
       width="800"
       height="600">
     </canvas>
     <article id="game-text">
-
+      <ul>
+        <li><button class="game-buttons">Start Game</button></li>
+        <li id="game-score">Score: <span id="score">0</span></li>
+        <li><button class="game-buttons">Restart</button></li>
+      </ul>
     </article>
   </section>
   <script src="main.bundle.js"></script>
