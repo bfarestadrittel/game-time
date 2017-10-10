@@ -35,6 +35,7 @@ describe('BrickArray unit testing', () => {
 
   })
 
-  it('should update total number of bricks', ( => {
+  it('should update total number of bricks', () => {
 
   })
+})
