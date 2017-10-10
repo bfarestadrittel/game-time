@@ -19,4 +19,30 @@ describe('paddle unit testing', () => {
     paddle.keyDownHandler(event);
     assert.equal(x === x + 25, true);
   })
+
+  it('should move right', () => {
+    let paddle = new Paddle(350, 580);
+    let x = paddle.x;
+
+    assert.equal(y === 350, true);
+    paddle.keyDownHandler(event);
+    assert.equal(x === x - 25, true);
+  })
+
+  // it('should stay inside the canvas walls', () => {
+  //   let paddle = new Paddle(350, 580);
+  //   let x = paddle.x;
+  //
+  //   if x <= 0
+  //    moveRight === false;
+  //   assert.equal(x === x = 25, true);
+  //   &&
+  //   if x + >= 800
+  //    moveLeft === false;
+  // })
+
+  //  it('should gain power ups', () => {
+  //    if powerUp === paddle.x + width;
+  //    return paddle.powerUp();
+  //})
 })

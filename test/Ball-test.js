@@ -42,5 +42,22 @@ describe('ball unit testing', () => {
     assert.equal(ball.dy, 4, true);
   })
 
-  it('should bounce off bricks')
+  it('should bounce off of bottom of bricks', () => {
+    let ball = new Ball();
+    // if ball.x + radius > brick.x + brick.width for each brick
+    //   brickHit === true;
+  })
+
+  it('should bounce off of left sides of bricks', () => {
+    let ball = new Ball();
+    // if ball.y + radius > brick.y + brick.height for each brick
+    //   brickHit === true;
+  })
+
+  it('should bounce off of right sides of bricks', () => {
+    let ball = new Ball();
+    // if ball.y + radius < brick.y + brick.height for each brick
+    //   brickHit === true;
+  })
+
 })
