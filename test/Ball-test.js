@@ -11,6 +11,11 @@ describe('ball unit testing', () => {
     let ball = new Ball();
   })
 
+  it('should instantiate a Ball', () => {
+  var ball = new Ball();
+  assert.isObject(ball);
+  });
+
   it('should have a fixed diameter', () => {
     let ball = new Ball(0, 0, 20, 20);
 

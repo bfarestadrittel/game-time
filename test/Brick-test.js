@@ -16,6 +16,6 @@ describe('brick unit testing', () => {
 
     assert.equal(brick.w, 100);
     assert.equal(brick.h, 20);
-  };
+  })
 
 });
