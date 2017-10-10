@@ -28,6 +28,23 @@ h1 {
   -webkit-text-stroke: 1px white;
 }
 
+#level-lives {
+  color: #9c92c9;
+  font-size: 24px;
+  font-weight: bold;
+  height: 24px;
+  margin: auto;
+  width: 800px;
+}
+
+#level {
+  float: left;
+}
+
+#lives {
+  float: right;
+}
+
 ul {
   align-items: center;
   align-content: center;
