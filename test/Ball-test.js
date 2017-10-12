@@ -26,12 +26,14 @@ describe('ball unit testing', () => {
   it('should bounce off the left wall', () => {
     let ball = new Ball(10);
 
+    assert.equal(ball.dx, 4, true);
+    ball.wallBounce();
     assert.equal(ball.dx, -4, true);
     ball.wallBounce();
     assert.equal(ball.dx, 4, true);
   })
 
-  it('should bounce off the right', () => {
+  it('should bounce off the right wall', () => {
     let ball = new Ball(10);
 
     assert.equal(ball.dx, 4, true);
@@ -48,21 +50,27 @@ describe('ball unit testing', () => {
   })
 
   it('should bounce off of bottom of bricks', () => {
-    let ball = new Ball();
-    // if ball.x + radius > brick.x + brick.width for each brick
-    //   brickHit === true;
+    let ball = new Ball(10);
+
+    assert.equal(ball.dy, -4, true);
+    assert.equal(ball.dy >= brickArray.brick.x + brickArray.brick.width + brickArray.brick.height);
+    ball.removeBricks();
+    // assert.equal(ball.dy, 4, true);
+    assert.equal(ball.y = -ball.y);
   })
 
   it('should bounce off of left sides of bricks', () => {
     let ball = new Ball();
-    // if ball.y + radius > brick.y + brick.height for each brick
-    //   brickHit === true;
+
+    assert.equal(ball.x + ball.radius > brick.x + brick.height);
+    assert.equal(ball.x = -ball.x);
   })
 
   it('should bounce off of right sides of bricks', () => {
     let ball = new Ball();
-    // if ball.y + radius < brick.y + brick.height for each brick
-    //   brickHit === true;
+
+    assert.equal(ball.x + radius > brick.x + brick.height);
+    assert.equal(ball.x = -ball.x);
   })
 
-})
+});
