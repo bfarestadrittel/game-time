@@ -1,4 +1,4 @@
-# Game Time Starter Kit (FE - Module 2)
+# Breakout - Brandon FR & Matt A.
 
 Basic Game Time starter kit.
 
