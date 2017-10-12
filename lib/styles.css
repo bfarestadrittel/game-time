@@ -86,8 +86,10 @@ li {
   width: 200px;
 }
 
-.game-buttons:hover {
+.game-buttons:hover:enabled {
   border: 2px solid #fff;
   color: #fff;
 }
+
+
 
