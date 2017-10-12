@@ -12,29 +12,23 @@ describe('BrickArray unit testing', () => {
   })
 
   it('should instantiate a BrickArray', () => {
-  var brickArray = new BrickArray();
-  assert.isObject(brickArray);
+    var brickArray = new BrickArray();
+    assert.isObject(brickArray);
   });
-
-  it('should have 21 total bricks', () => {
-    let brickArray = new BrickArray();
-
-    assert.equal(array === [i]);
-  })
 
   it('should have 3 rows', () => {
     let brickArray = new BrickArray(7, 3);
 
-    assert.equal(brickArray.bricks.rows === 3);
+    assert.equal(brickArray.row === 3, true);
   })
 
   it('should have 7 columns', () => {
     let brickArray = new BrickArray(7, 3);
 
-    assert.equal(brickArray.bricks.columns === 7);
+    assert.equal(brickArray.column === 7, true);
   })
 
-  it('should remove a brick from array after a collisions', () => {
+  it.skip('should remove a brick from array after a collisions', () => {
     let brick = new Brick(100, 20);
 
     assert.equal(bricks.brick.w, 100);
@@ -45,10 +39,12 @@ describe('BrickArray unit testing', () => {
     // assert.equal(brick.h, 0);
   })
 
-  it('should have win if there are no bricks in the array', () => {
+  it.skip('should win if there are no bricks in the array', () => {
     let brickArray = new BrickArray(7, 3);
+    let game = new Game();
 
-    assert.equal(brickArray.bricks.columns === 7);
+    if(game.score === 2100) {
+      this.winGameScreen();
+    }
   })
-
-})
+});

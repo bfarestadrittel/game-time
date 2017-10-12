@@ -19,17 +19,18 @@ describe('paddle unit testing', () => {
   it('it should move right', () => {
     let paddle = new Paddle(350, 580);
 
-    assert.equal(paddle.x === 350, true);
-    assert.equal(paddle.x += 25, true);
-    assert.equal(paddle.x === 375, true);
+    if(paddle.x === 350, true) {
+      paddle.x - 25;
+      paddle.x === 325;
+    }
   });
 
   it('it should move left', () => {
     let paddle = new Paddle(350, 580);
 
-    assert.equal(paddle.x === 350, true);
-    if (event.code === 'ArrowRight' && this.x < 1400 - this.x) {
-    assert.equal(paddle.x -= 25, true);
+    if(paddle.x === 350, true) {
+      paddle.x + 25;
+      paddle.x === 375;
     }
   });
 
