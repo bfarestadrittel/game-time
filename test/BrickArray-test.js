@@ -41,13 +41,8 @@ describe('BrickArray unit testing', () => {
 
       brickArray.buildBricks();
 
-      console.log(brickArray.bricks.length)
       assert.equal(brickArray.bricks.length, 21);
-
-      console.log(brickArray.bricks[0]);
-      console.log(ball);
       brickArray.removeBricks(brickArray.bricks, ball, new Game);
-      console.log(ball.x);
       assert.equal(brickArray.bricks.length, 20);
     })
 
