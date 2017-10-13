@@ -23,48 +23,41 @@ describe('ball unit testing', () => {
     assert.equal(ball.h, 20);
   })
 
-  it('should bounce off the paddle', () => {
-    let ball = new Ball(10);
-    let paddle = new Paddle();
-
-    if (ball.x <= paddle.x + 100 - ball.radius) {
-      ball.dy = -ball.dy;
-    }
-  })
-
   it('should bounce off the left wall', () => {
     let ball = new Ball(10);
 
-    assert.equal(ball.dx, 4, true);
+    assert.equal(ball.dx, 4);
     ball.wallBounce();
-    assert.equal(ball.dx, -4, true);
+    assert.equal(ball.dx, -4);
     ball.wallBounce();
-    assert.equal(ball.dx, 4, true);
+    assert.equal(ball.dx, 4);
   })
 
   it('should bounce off the right wall', () => {
     let ball = new Ball(10);
 
-    assert.equal(ball.dx, 4, true);
+    assert.equal(ball.dx, 4);
     ball.wallBounce();
-    assert.equal(ball.dx, -4, true);
+    assert.equal(ball.dx, -4);
   })
 
   it('should bounce off the ceiling', () => {
-    let ball = new Ball(10);
-
-    if (ball.y <= 0 + ball.radius) {
-      ball.dy = -ball.dy;
-    }
+    let ball = new Ball(10, 10);
+    ball.dy = -4
+    assert.equal(ball.dy, -4);
+    ball.wallBounce();
+    assert.equal(ball.dy, 4);
   })
 
-  it('should bounce off of bottom of bricks', () => {
-    let ball = new Ball(10);
-    let brick = new Brick();
-
-    if (ball.y - ball.radius >= brick.top) {
-      ball.dy = -ball.dy;
-    }
+  it.skip('should bounce off of bottom of bricks', () => {
+    let ball = new Ball(10, 30);
+    let brick = new Brick(10, 10)
+    ball.dy = -4
+    assert.equal(ball.dy, -4);
+    assert.equal(ball.dy >= brickArray.brick.x + brickArray.brick.width + brickArray.brick.height);
+    ball.removeBricks();
+    // assert.equal(ball.dy, 4);
+    assert.equal(ball.y = -ball.y);
   })
 
 });
