@@ -4,6 +4,7 @@ const Ball = require('../lib/Ball.js');
 const Paddle = require('../lib/Paddle.js');
 const Brick = require('../lib/Brick.js');
 const BrickArray = require('../lib/BrickArray.js');
+const Game = require('../lib/Game.js');
 
 describe('ball unit testing', () => {
 
@@ -43,21 +44,25 @@ describe('ball unit testing', () => {
 
   it('should bounce off the ceiling', () => {
     let ball = new Ball(10, 10);
+    
     ball.dy = -4
     assert.equal(ball.dy, -4);
     ball.wallBounce();
     assert.equal(ball.dy, 4);
   })
 
-  it.skip('should bounce off of bottom of bricks', () => {
-    let ball = new Ball(10, 30);
-    let brick = new Brick(10, 10)
-    ball.dy = -4
-    assert.equal(ball.dy, -4);
-    assert.equal(ball.dy >= brickArray.brick.x + brickArray.brick.width + brickArray.brick.height);
-    ball.removeBricks();
-    // assert.equal(ball.dy, 4);
-    assert.equal(ball.y = -ball.y);
+  it('should bounce off of bottom of bricks', () => {
+    let ball = new Ball(55, 50);
+    let brickArray = new BrickArray(1, 1)
+
+    ball.radius = 10;
+    ball.dy = -10;
+    brickArray.buildBricks();
+    assert.equal(ball.y, 50);
+    ball.move();
+    assert.equal(ball.y, 40);
+    brickArray.removeBricks(brickArray.bricks, ball, new Game);
+    assert.equal(ball.dy, 10);
   })
 
 });
