@@ -32,18 +32,32 @@ describe('ball unit testing', () => {
     assert.equal(ball.x, 34)
   })
 
-  it.skip('should reset ball', () => {
-    let ball = new Ball(10, 10);
+  it('should reset ball', () => {
     let game = new Game();
+    game.ball.x = 10;
 
-    ball.move();
+    assert.equal(game.ball.x, 10);
+    assert.equal(game.ball.dx, 4);
     game.ballReset();
-    assert.equal(ball.x, 400);
+    assert.equal(game.ball.x, 400);
+    assert.equal(game.ball.dx, 0);
   })
 
-  it.skip('should start a new ball after 3s', () => {
-    let ball = new Ball(10, 10);
+  it('should start a new ball after 3s', () => {
+    let game = new Game();
+    game.ball.dx = 10;
+    game.ball.dy = 10;
 
+    assert.equal(game.ball.dx, 10);
+    assert.equal(game.ball.dy, 10);
+
+    game.ballLaunch();
+
+    setTimeout(function() {
+      assert.equal(game.ball.dx = 4);
+      assert.equal(game.ball.dy = -4);
+
+    }, 4000);
 
   })
 
