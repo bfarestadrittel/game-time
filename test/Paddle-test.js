@@ -67,4 +67,11 @@ describe('paddle unit testing', () => {
     assert.equal(paddle.x > 700, false);
   });
 
+  it.skip('should reset paddle', () => {
+    let ball = new Paddle(10, 10);
+    let game = new Game();
+
+    
+  })
+
 })

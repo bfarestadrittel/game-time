@@ -24,6 +24,29 @@ describe('ball unit testing', () => {
     assert.equal(ball.h, 20);
   })
 
+  it('the x position should change on move', () => {
+    let ball = new Ball(30, 30);
+
+    assert.equal(ball.x, 30)
+    ball.move()
+    assert.equal(ball.x, 34)
+  })
+
+  it.skip('should reset ball', () => {
+    let ball = new Ball(10, 10);
+    let game = new Game();
+
+    ball.move();
+    game.ballReset();
+    assert.equal(ball.x, 400);
+  })
+
+  it.skip('should start a new ball after 3s', () => {
+    let ball = new Ball(10, 10);
+
+
+  })
+
   it('should bounce off the left wall', () => {
     let ball = new Ball(10);
 
@@ -44,7 +67,7 @@ describe('ball unit testing', () => {
 
   it('should bounce off the ceiling', () => {
     let ball = new Ball(10, 10);
-    
+
     ball.dy = -4
     assert.equal(ball.dy, -4);
     ball.wallBounce();
