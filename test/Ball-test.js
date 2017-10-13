@@ -67,20 +67,4 @@ describe('ball unit testing', () => {
     }
   })
 
-  it.skip('should bounce off of left sides of bricks', () => {
-    let ball = new Ball(10);
-    let brick = new Brick();
-
-    assert.equal(ball.x + ball.radius > brick.x + brick.height);
-    assert.equal(ball.x = -ball.x);
-  })
-
-  it.skip('should bounce off of right sides of bricks', () => {
-    let ball = new Ball(10);
-    let brick = new Brick();
-
-    assert.equal(ball.x + radius > brick.x + brick.height);
-    assert.equal(ball.x = -ball.x);
-  })
-
 });
