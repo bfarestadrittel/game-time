@@ -4,6 +4,7 @@ const Ball = require('../lib/Ball.js');
 const Paddle = require('../lib/Paddle.js');
 const Brick = require('../lib/Brick.js');
 const BrickArray = require('../lib/BrickArray.js');
+const Game = require('../lib/Game.js');
 
 describe('paddle unit testing', () => {
 
@@ -67,11 +68,13 @@ describe('paddle unit testing', () => {
     assert.equal(paddle.x > 700, false);
   });
 
-  it.skip('should reset paddle', () => {
-    let ball = new Paddle(10, 10);
-    let game = new Game();
+  it('should reset paddle to start coordinates', () => {
+    let game = new Game()
 
-    
+    game.paddle.x = 0;
+    assert.equal(game.paddle.x, 0)
+    game.paddleReset()
+    assert.equal(game.paddle.x, 350)
   })
 
 })
