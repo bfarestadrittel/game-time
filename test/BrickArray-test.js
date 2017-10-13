@@ -28,23 +28,24 @@ describe('BrickArray unit testing', () => {
     assert.equal(brickArray.column === 7, true);
   })
 
-  it.skip('should remove a brick from array after a collisions', () => {
-    let brick = new Brick(100, 20);
-
-    assert.equal(bricks.brick.w, 100);
-    assert.equal(bricks.brick.h, 20);
-    brickArray.removeBricks();
-    assert.equal(brickArray.bricks.brick = [0]);
-    // assert.equal(brick.w, 0);
-    // assert.equal(brick.h, 0);
-  })
-
-  it.skip('should win if there are no bricks in the array', () => {
-    let brickArray = new BrickArray(7, 3);
-    let game = new Game();
-
-    if(game.score === 2100) {
-      this.winGameScreen();
-    }
-  })
+//   it('should remove a brick from array after a collisions', () => {
+//     let ball = new Ball(10, 10);
+//     let brickArray = brick.showBricks();
+//     let brick = new Brick(10, 10);
+// console.log(brickArray.bricks.length);
+//     ball.move();
+//     brickArray.showBricks();
+//     assert.equal(brickArray.bricks.length, 21);
+//     brickArray.removeBricks(brickArray, ball, new Game);
+//     assert.equal(brickArray.bricks.length, 20);
+//   })
+//
+//   it.skip('should win if there are no bricks in the array', () => {
+//     let brickArray = new BrickArray(7, 3);
+//     let game = new Game();
+//
+//     if(game.score === 2100) {
+//       this.winGameScreen();
+//     }
+//   })
 });

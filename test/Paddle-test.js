@@ -19,37 +19,52 @@ describe('paddle unit testing', () => {
   it('it should move right', () => {
     let paddle = new Paddle(350, 580);
 
-    if(paddle.x === 350, true) {
-      paddle.x - 25;
-      paddle.x === 325;
+    let event = {
+      preventDefault: function () {},
+      code: 'ArrowRight',
     }
+
+    paddle.keyDownHandler(event);
+    assert.equal(paddle.x, 375);
+
   });
 
   it('it should move left', () => {
     let paddle = new Paddle(350, 580);
 
-    if(paddle.x === 350, true) {
-      paddle.x + 25;
-      paddle.x === 375;
+    let event = {
+      preventDefault: function () {},
+      code: 'ArrowLeft',
     }
+
+    paddle.keyDownHandler(event);
+    assert.equal(paddle.x, 325);
   });
 
   it('it should not go off the left side of the canvas', () => {
     let paddle = new Paddle(0, 580);
 
-    if(paddle.x <= 0) {
-      paddle.moveLeft === false;
-      assert.equal(paddle.x === paddle.x + 10);
+    let event = {
+      preventDefault: function () {},
+      code: 'ArrowLeft',
     }
+
+    assert.equal(paddle.x < 0, false);
+    paddle.keyDownHandler(event);
+    assert.equal(paddle.x < 0, false);
   });
 
   it('it should not go off the right side of the canvas', () => {
-    let paddle = new Paddle(0, 580);
+    let paddle = new Paddle(800, 580);
 
-    if(paddle.x >= 800) {
-      paddle.moveRight === false;
-      assert.equal(paddle.x === paddle.x - 10);
+    let event = {
+      preventDefault: function () {},
+      code: 'ArrowRight',
     }
+
+    assert.equal(paddle.x > 700, false);
+    paddle.keyDownHandler(event);
+    assert.equal(paddle.x > 700, false);
   });
 
 })
